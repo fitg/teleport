@@ -26,6 +26,23 @@
       <artifactId>commons-codec</artifactId>
       <version>1.11</version>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20190722</version>
+    </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <fork>true</fork>
+          <executable>%JAVA_HOME%\bin\javac.exe</executable>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
