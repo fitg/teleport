@@ -17,8 +17,14 @@ import org.json.JSONObject;
 public class App 
 {
     public static void main( String[] args ) {
+        TeleportProperties properties = null;
 
-        System.out.println( "Hello World!" );
-
+        try {
+            properties = new TeleportProperties();
+        } catch (IOException e) {
+            System.out.println("Exception: " + e);
+        } finally {
+            System.out.println( "Hello World! " + properties.getPropertyValue("url") );
+        }
     }
 }
